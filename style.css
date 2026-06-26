@@ -1,0 +1,75 @@
+/* Base responsive settings and accessibility contrast */
+:root {
+    --primary-color: #2c5e3b;
+    --background-color: #f4f7f6;
+    --text-color: #222222;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px; /* Ensures the page doesn't stretch too wide on large screens */
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+.video-wrapper {
+    margin: 20px 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Makes the video responsive to the container size */
+video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1e4028;
+}
+
+/* Accessibility: clear outline for keyboard navigation */
+button:focus {
+    outline: 3px solid #7cb342;
+    outline-offset: 2px;
+}
+
+/* Utility class applied via JavaScript to hide the video */
+.hidden {
+    display: none;
+}
